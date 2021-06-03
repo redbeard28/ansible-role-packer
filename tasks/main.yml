@@ -1,10 +1,10 @@
 ---
 # tasks file for ansible-role-packer
 
-- name: Include OS specific variables.
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Include OS specific variables."
   include_vars: "{{ ansible_system }}.yml"
   when: packer_install
 
-- name: Install Packer
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Install Packer"
   include_tasks: "setup-{{ ansible_system }}.yml"
   when: packer_install
