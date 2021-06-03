@@ -2,3 +2,5 @@
 # Possible values: https://releases.hashicorp.com/packer/index.json
 # Default: latest
 packer_version: latest
+
+packer_install: false
